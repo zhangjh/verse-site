@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Check, Sparkles, X } from 'lucide-react'
+import { Check, Info, Sparkles, X } from 'lucide-react'
 import { SeoHead } from '../components/SeoHead'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -116,6 +116,11 @@ export function PricingPage() {
                 </div>
               )
             })}
+          </div>
+
+          <div className="flex items-center justify-center gap-2 mb-14 text-sm text-[var(--color-text-muted)] bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl px-4 py-3">
+            <Info size={15} className="shrink-0 text-amber-500" />
+            <span>{t('pricingPage.paymentNote')}</span>
           </div>
 
           <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] overflow-hidden">

@@ -245,6 +245,7 @@
     "featureLinkPreview": "Link previews",
     "featurePriority": "Priority support",
     "yearly": "Yearly subscription",
-    "ctaStart": "Get Started"
+    "ctaStart": "Get Started",
+    "paymentNote": "This page shows feature comparisons only. Purchase via the Web app or desktop client."
   }
 }

@@ -245,6 +245,7 @@
     "featureLinkPreview": "链接预览",
     "featurePriority": "优先支持",
     "yearly": "按年订阅",
-    "ctaStart": "开始使用"
+    "ctaStart": "开始使用",
+    "paymentNote": "网站仅展示功能对比，付费请前往 Web 版或本地客户端"
   }
 }
