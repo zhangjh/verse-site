@@ -151,7 +151,7 @@
     "button": "Download Free"
   },
   "download": {
-    "title": "Download Verse",
+    "title": "Download",
     "desc": "Choose your platform and get started",
     "platforms": {
       "windows": "Windows",
@@ -162,6 +162,8 @@
     "macosDesc": "macOS 15+, Intel & Apple Silicon",
     "webDesc": "No installation needed, open in your browser",
     "downloadButton": "Download",
+    "checking": "Checking...",
+    "comingSoon": "Coming soon",
     "openWeb": "Open Web App",
     "requirements": "System Requirements",
     "version": "Latest Version",

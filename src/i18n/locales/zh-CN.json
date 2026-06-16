@@ -151,7 +151,7 @@
     "button": "免费下载"
   },
   "download": {
-    "title": "下载 Verse",
+    "title": "下载",
     "desc": "选择你的平台，即刻开始",
     "platforms": {
       "windows": "Windows",
@@ -162,6 +162,8 @@
     "macosDesc": "macOS 15+，Intel & Apple Silicon",
     "webDesc": "无需安装，打开浏览器即可使用",
     "downloadButton": "下载",
+    "checking": "检查更新中...",
+    "comingSoon": "即将推出",
     "openWeb": "打开 Web 版",
     "requirements": "系统要求",
     "version": "最新版本",

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   Monitor,
@@ -9,32 +10,73 @@ import {
 } from 'lucide-react'
 import { SeoHead } from '../components/SeoHead'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import { useGitHubRelease } from '../hooks/useGitHubRelease'
 
-const platforms = [
-  {
-    key: 'windows' as const,
-    icon: Monitor,
-    link: '#',
-    filename: 'Verse_1.2.1_x64-setup.exe',
-  },
-  {
-    key: 'macos' as const,
-    icon: Apple,
-    link: '#',
-    filename: 'Verse_1.2.1_x64.dmg',
-  },
-  {
-    key: 'web' as const,
-    icon: Globe,
-    link: 'https://verse.zhangjh.cn',
-    isExternal: true,
-  },
-]
+interface ArchLink {
+  arch: string
+  url: string
+}
+
+interface Platform {
+  key: string
+  icon: typeof Monitor | typeof Apple | typeof Globe
+  link: string
+  archLinks?: ArchLink[]
+  isExternal?: true
+}
+
+const RELEASES_URL = 'https://github.com/zhangjh/verse-site/releases'
+
+function findArchAssets(assets: { name: string; url: string }[], ext: string): ArchLink[] {
+  const results: ArchLink[] = []
+  const archPatterns = [
+    { match: /arm64|aarch64|apple[-\s]?silicon/i, arch: 'Apple Silicon' },
+    { match: /x64|x86_64|intel|amd64/i, arch: 'Intel' },
+  ]
+  for (const { match, arch } of archPatterns) {
+    const asset = assets.find((a) => a.name.endsWith(ext) && match.test(a.name))
+    if (asset) results.push({ arch, url: asset.url })
+  }
+  if (results.length === 0) {
+    const fallback = assets.find((a) => a.name.endsWith(ext))
+    if (fallback) results.push({ arch: '', url: fallback.url })
+  }
+  return results
+}
 
 export function DownloadPage() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language.startsWith('zh') ? 'zh' : 'en'
   const { ref, visible } = useScrollReveal<HTMLDivElement>(0.05)
+  const { version, assets, loading, error } = useGitHubRelease()
+  const [platforms, setPlatforms] = useState<Platform[]>(() => [
+    { key: 'windows', icon: Monitor, link: '#' },
+    { key: 'macos', icon: Apple, link: '#' },
+    { key: 'web', icon: Globe, link: 'https://verse.zhangjh.cn', isExternal: true },
+  ])
+
+  useEffect(() => {
+    if (loading || error) return
+    setPlatforms([
+      {
+        key: 'windows',
+        icon: Monitor,
+        link: assets.find((a) => a.name.endsWith('.exe'))?.url ?? RELEASES_URL,
+      },
+      {
+        key: 'macos',
+        icon: Apple,
+        link: RELEASES_URL,
+        archLinks: findArchAssets(assets, '.dmg'),
+      },
+      {
+        key: 'web',
+        icon: Globe,
+        link: 'https://verse.zhangjh.cn',
+        isExternal: true,
+      },
+    ])
+  }, [loading, error, assets])
 
   return (
     <>
@@ -64,10 +106,11 @@ export function DownloadPage() {
             {platforms.map((platform, i) => {
               const Icon = platform.icon
               const isWeb = platform.key === 'web'
+              const archLinks = platform.archLinks
               return (
                 <div
                   key={platform.key}
-                  className="p-6 rounded-2xl bg-[var(--color-card)] border border-[var(--color-border)] text-center hover:border-amber-200 dark:hover:border-amber-800 transition-all hover:-translate-y-0.5"
+                  className="p-6 rounded-2xl bg-[var(--color-card)] border border-[var(--color-border)] text-center hover:border-amber-200 dark:hover:border-amber-800 transition-all hover:-translate-y-0.5 flex flex-col"
                   style={{ transitionDelay: `${i * 100}ms` }}
                 >
                   <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
@@ -76,7 +119,7 @@ export function DownloadPage() {
                   <h3 className="text-lg font-bold mb-1">
                     {t(`download.platforms.${platform.key}`)}
                   </h3>
-                  <p className="text-sm text-[var(--color-text-muted)] mb-5">
+                  <p className="text-sm text-[var(--color-text-muted)] mb-5 flex-1">
                     {t(`download.${platform.key}Desc`)}
                   </p>
                   {isWeb ? (
@@ -89,13 +132,30 @@ export function DownloadPage() {
                       {t('download.openWeb')}
                       <ExternalLink size={14} />
                     </a>
+                  ) : archLinks && archLinks.length > 0 ? (
+                    <div className="flex flex-col gap-2">
+                      {archLinks.map((al) => (
+                        <a
+                          key={al.arch}
+                          href={al.url}
+                          className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium transition-colors"
+                        >
+                          <Download size={14} />
+                          {t('download.downloadButton')} ({al.arch})
+                        </a>
+                      ))}
+                    </div>
                   ) : (
                     <a
                       href={platform.link}
-                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium transition-colors"
+                      className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium transition-colors"
                     >
                       <Download size={14} />
-                      {t('download.downloadButton')}
+                      {loading
+                        ? t('download.checking')
+                        : platform.link === '#'
+                          ? t('download.comingSoon')
+                          : t('download.downloadButton')}
                     </a>
                   )}
                 </div>
@@ -108,11 +168,15 @@ export function DownloadPage() {
               <div>
                 <h3 className="font-semibold text-lg">{t('download.version')}</h3>
                 <p className="text-sm text-[var(--color-text-muted)]">
-                  {t('download.currentVersion')}
+                  {loading
+                    ? t('download.checking')
+                    : error
+                      ? t('download.currentVersion')
+                      : `v${version}`}
                 </p>
               </div>
               <a
-                href="https://github.com/zhangjh/verse-site/releases"
+                href={RELEASES_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm text-amber-600 dark:text-amber-400 hover:underline"
