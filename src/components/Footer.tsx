@@ -12,7 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
             <Link to={`/${lang}`} className="flex items-center gap-2.5 mb-3">
-              <img src="/site/logo.png" alt={t('siteName')} className="w-7 h-7 rounded-md" />
+              <img src="/logo.png" alt={t('siteName')} className="w-7 h-7 rounded-md" />
               <span className="font-semibold text-lg">{t('siteName')}</span>
             </Link>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xs">
@@ -54,7 +54,7 @@ export function Footer() {
                 <QrCode size={14} className="text-[var(--color-text-muted)] shrink-0" />
                 <span className="text-sm text-[var(--color-text-muted)]">{t('footer.wechat')}</span>
                 <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block z-10">
-                  <img src="/site/wechat-qr.jpg" alt="WeChat QR" className="w-28 h-28 rounded-xl border border-[var(--color-border)] shadow-lg object-cover" />
+                  <img src="/wechat-qr.jpg" alt="WeChat QR" className="w-28 h-28 rounded-xl border border-[var(--color-border)] shadow-lg object-cover" />
                 </div>
               </li>
             </ul>

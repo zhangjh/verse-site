@@ -12,7 +12,7 @@ function Loading() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
-        <img src="/site/logo.png" alt={navigator.language.startsWith('zh') ? '素章' : 'Verse'} className="w-10 h-10 mx-auto mb-3 rounded-lg" />
+        <img src="/logo.png" alt={navigator.language.startsWith('zh') ? '素章' : 'Verse'} className="w-10 h-10 mx-auto mb-3 rounded-lg" />
         <div className="w-32 h-1 mx-auto bg-stone-200 dark:bg-stone-700 rounded-full overflow-hidden">
           <div className="w-1/3 h-full bg-amber-500 rounded-full animate-pulse" />
         </div>
@@ -23,7 +23,7 @@ function Loading() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/site">
+    <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<LanguageRedirect />} />

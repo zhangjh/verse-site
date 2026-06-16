@@ -12,7 +12,7 @@ export function SeoHead({ title, description }: SeoHeadProps) {
   const location = useLocation()
   const lang = i18n.language.startsWith('zh') ? 'zh' : 'en'
   const altLang = lang === 'zh' ? 'en' : 'zh'
-  const baseUrl = 'https://verse.zhangjh.cn/site'
+  const baseUrl = 'https://verse-site.zhangjh.cn'
 
   const pageTitle = title || t('site.title')
   const pageDesc = description || t('site.description')

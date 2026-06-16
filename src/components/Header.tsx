@@ -72,7 +72,7 @@ export function Header() {
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
           <Link to={`/${lang}`} className="flex items-center gap-2.5 group">
-            <img src="/site/logo.png" alt={t('siteName')} className="w-8 h-8 rounded-lg transition-transform group-hover:scale-105" />
+            <img src="/logo.png" alt={t('siteName')} className="w-8 h-8 rounded-lg transition-transform group-hover:scale-105" />
             <span className="font-semibold text-lg tracking-tight">{t('siteName')}</span>
           </Link>
 
