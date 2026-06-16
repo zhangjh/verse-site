@@ -1,0 +1,248 @@
+{
+  "siteName": "素章",
+  "site": {
+    "title": "素章：随时记录，随手成文",
+    "description": "Notion 风格的结构化文档管理、Obsidian 式的本地隐私、AI 写作辅助——融合三者的复合生产力工具。"
+  },
+  "nav": {
+    "features": "特性",
+    "pricing": "定价",
+    "download": "下载",
+    "faq": "帮助指南",
+    "openWeb": "打开 Web 版",
+    "language": "English"
+  },
+  "hero": {
+    "title": "随时记录，随手成文。",
+    "subtitle": "Notion 的文档空间 · Obsidian 的本地隐私 · AI 的写作智能",
+    "desc": "不止是又一个笔记应用。\n融合 Notion 的结构化文档管理、Obsidian 的本地优先隐私、AI 的写作辅助——\n一个工具，搞定记录、整理和成稿。",
+    "ctaDownload": "免费下载",
+    "ctaLearnMore": "了解更多"
+  },
+  "features": {
+    "title": "Notion + Obsidian + AI",
+    "desc": "不堆砌功能，融合三者优势打造一个复合生产力工具",
+    "items": [
+      {
+        "title": "结构化文档空间",
+        "desc": "像 Notion 一样用文件夹和树形结构管理文档，像 Obsidian 一样数据留在本地。富文本所见即所得，也可随时切换到 Markdown 分栏模式。",
+        "detail": "Notion 的结构 + Obsidian 的隐私，一个工具搞定。"
+      },
+      {
+        "title": "AI 写作搭档",
+        "desc": "选中多条笔记素材，选择文档模板，AI 基于你的内容生成草稿——不是泛泛的 AI 回复，而是用你自己的积累写你自己的文档。支持 4 种语气改写。",
+        "detail": "用你的素材，写你的文档。"
+      },
+      {
+        "title": "链接预览",
+        "desc": "在文档中粘贴链接，自动展开为富媒体卡片——网页摘要、视频嵌入、封面图，无需跳出编辑器即可预览。",
+        "detail": "粘贴即预览，阅读不中断。"
+      },
+      {
+        "title": "日历笔记",
+        "desc": "内置日历组件，按日期快速记录。适合日记、工作日志、会议备忘，与文档系统无缝衔接。",
+        "detail": "时间线式的记录方式，自然又直观。"
+      },
+      {
+        "title": "附件管理",
+        "desc": "支持图片、视频、PDF、文本等文件的上传和嵌入。应用内直接预览，无需打开外部程序，本地存储安全可靠。",
+        "detail": "即插即用，预览不跳转。"
+      },
+      {
+        "title": "云同步 & 分享（PRO）",
+        "desc": "端到端加密的桌面与 Web 双向同步，生成公开只读分享链接。数据安全可靠，随时随地访问。",
+        "detail": "安全同步，优雅分享。"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "三步搞定一篇文档",
+    "desc": "从零散素材到正式文档，简单三步",
+    "steps": [
+      {
+        "title": "随时记录素材",
+        "desc": "想法、聊天摘录、工作进展、生活事项……用你最舒服的方式记录下来，不用担心格式和结构。"
+      },
+      {
+        "title": "AI 帮你整理",
+        "desc": "选中多条素材作为上下文，选择文档模板。AI 会先追问补充信息，再一键生成结构化草稿。不满意随时改写。"
+      },
+      {
+        "title": "导出直接使用",
+        "desc": "在编辑器中微调后，复制到剪贴板、导出 Markdown 或 PDF。一封邮件、一份周报、一篇文章——直接可用。"
+      }
+    ]
+  },
+  "useCases": {
+    "title": "适合谁用",
+    "desc": "无论你是职场人、求职者、学生还是创作者，Verse 都能让文档工作更高效",
+    "items": [
+      {
+        "title": "职场人",
+        "desc": "周报、述职报告、会议纪要、客户邮件——日常文档一站搞定。"
+      },
+      {
+        "title": "求职者",
+        "desc": "简历、求职信、面试故事——AI 帮你打磨每一段经历。"
+      },
+      {
+        "title": "学生",
+        "desc": "读书报告、演讲稿、课程总结——从素材到成稿更轻松。"
+      },
+      {
+        "title": "内容创作者",
+        "desc": "选题构思、脚本撰写、文章发布——记录灵感到产出作品。"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "选择适合你的计划",
+    "desc": "从免费开始，按需升级",
+    "free": {
+      "name": "Free",
+      "price": "免费",
+      "desc": "适合个人日常使用",
+      "features": [
+        "本地文档编辑（富文本 + Markdown）",
+        "文件夹管理 & 收藏",
+        "日历笔记",
+        "附件 & 图片嵌入",
+        "导出（复制 / Markdown / PDF）"
+      ]
+    },
+    "pro": {
+      "name": "PRO",
+      "price": "按年订阅",
+      "desc": "适合跨设备工作的用户",
+      "features": [
+        "所有 Free 功能",
+        "云同步（端到端加密）",
+        "附件 & 图片云端存储",
+        "文档分享（公开只读链接）",
+        "链接预览（富媒体嵌入）",
+        "优先支持"
+      ]
+    },
+    "plus": {
+      "name": "PLUS",
+      "price": "按年订阅",
+      "desc": "适合高频使用 AI 的用户",
+      "features": [
+        "所有 PRO 功能",
+        "AI 写作助手（每月 100 万 token）",
+        "AI 改写（4 种语气）",
+        "更多文档模板"
+      ]
+    },
+    "cta": "查看完整定价",
+    "faq": "常见问题",
+    "faqQ1": "免费版有功能限制吗？",
+    "faqA1": "免费版包含完整的编辑器和本地存储功能，日常记录和写作完全够用。AI 写作助手、云同步为付费功能。",
+    "faqQ2": "可以随时取消订阅吗？",
+    "faqA2": "是的，PRO 和 PLUS 订阅按年付费，可随时取消。取消后到期前仍可享受全部功能。",
+    "faqQ3": "数据安全如何保障？",
+    "faqA3": "免费版数据完全存储在本地。PRO 版的云同步使用端到端加密，服务器无法读取你的内容。",
+    "faqQ4": "支持哪些平台？",
+    "faqA4": "目前支持 Windows (x64)、macOS (Intel & Apple Silicon) 桌面版，以及 Web 浏览器版。macOS 最低版本 15+。"
+  },
+  "cta": {
+    "title": "开始使用 Verse",
+    "desc": "免费下载，立即体验本地优先的文档工作方式",
+    "button": "免费下载"
+  },
+  "download": {
+    "title": "下载 Verse",
+    "desc": "选择你的平台，即刻开始",
+    "platforms": {
+      "windows": "Windows",
+      "macos": "macOS",
+      "web": "Web 版"
+    },
+    "windowsDesc": "Windows 10/11，x64",
+    "macosDesc": "macOS 15+，Intel & Apple Silicon",
+    "webDesc": "无需安装，打开浏览器即可使用",
+    "downloadButton": "下载",
+    "openWeb": "打开 Web 版",
+    "requirements": "系统要求",
+    "version": "最新版本",
+    "currentVersion": "v1.2.1",
+    "releaseNotes": "更新日志"
+  },
+  "faq": {
+    "title": "帮助指南",
+    "desc": "常见问题解答",
+    "items": [
+      {
+        "q": "Verse 和 ChatGPT 有什么不同？",
+        "a": "ChatGPT 是一个对话窗口，擅长一次性内容生成。但如果想长期积累笔记、把零散素材整理成正式文档，ChatGPT 的对话形式就不太方便了——会话之间互相独立，难以交叉引用。Verse 是一个写作工作台：笔记按文件夹组织在你的电脑上，可以选中多条素材让 AI 辅助成稿。简单说：ChatGPT 是对话生成，Verse 是写作工作台。"
+      },
+      {
+        "q": "Verse 和 Notion / Obsidian 有什么不同？",
+        "a": "Verse 融合了 Notion 的结构化文档管理和 Obsidian 的本地优先理念，并在此基础上增加了 AI 写作辅助。你可以像用 Notion 一样管理文档，像用 Obsidian 一样保护数据隐私，还能用 AI 把零散记录整理成正式文档——三者的优势集成在一个工具里。"
+      },
+      {
+        "q": "我的数据安全吗？",
+        "a": "免费版数据完全存储在本地 SQLite 数据库中，不上传到任何服务器。AI 功能调用时需要你明确选择作为上下文的素材，不会自动扫描你的全部文档。PRO 版的云同步使用端到端加密。"
+      },
+      {
+        "q": "AI 功能怎么用？",
+        "a": "在右侧 AI 面板中，选择文档类型（通用、邮件、周报等），引用你的素材，AI 会先追问关键信息再生成草稿。生成后可以用 4 种语气改写，满意后一键应用到编辑器。"
+      },
+      {
+        "q": "免费版和付费版有什么区别？",
+        "a": "免费版包含完整的编辑和本地存储功能，适合日常记录。PRO 版增加云同步、图片云端存储和文档分享。PLUS 版提供 AI 写作助手和 AI 改写功能（每月 100 万 token）。具体对比请查看定价页面。"
+      },
+      {
+        "q": "如何导入 / 导出文档？",
+        "a": "支持导入 Markdown 文件和 ZIP 存档。支持导出为 Markdown、PDF，以及复制到剪贴板。也可以导出整个工作空间为 ZIP 备份。"
+      },
+      {
+        "q": "支持哪些平台？",
+        "a": "目前提供 Windows (x64) 和 macOS 15+ (Intel & Apple Silicon) 桌面客户端，以及 Web 浏览器版本。"
+      },
+      {
+        "q": "有团队版或企业版吗？",
+        "a": "目前以个人用户为主。如果有团队协作需求，欢迎通过反馈渠道联系我们，我们会根据需求规划后续版本。"
+      }
+    ]
+  },
+  "footer": {
+    "description": "融合 Notion 的结构化文档、Obsidian 的本地隐私和 AI 智能的复合生产力工具。",
+    "product": "产品",
+    "features": "特性",
+    "pricing": "定价",
+    "download": "下载",
+    "faq": "帮助指南",
+    "contact": "联系我们",
+    "social": "社区",
+    "wechat": "公众号",
+    "wechatName": "Verse-素章",
+    "copyright": "© 2024-2026 素章。保留所有权利。"
+  },
+  "featuresPage": {
+    "title": "所有特性",
+    "desc": "每个功能都为你更快完成文档而设计"
+  },
+  "pricingPage": {
+    "title": "定价",
+    "desc": "从免费开始，按需升级",
+    "compareTitle": "功能对比",
+    "featureLocalFirst": "本地优先存储",
+    "featureRichText": "富文本编辑",
+    "featureMarkdown": "Markdown 编辑",
+    "featureFolder": "文件夹管理 & 收藏",
+    "featureCalendar": "日历笔记",
+    "featureAttachments": "附件 & 图片嵌入",
+    "featureExport": "导出（Markdown / PDF）",
+    "featureAI": "AI 写作助手",
+    "featureAILimit": "AI 额度（每月 100 万 token）",
+    "featureAIRewrite": "AI 改写（4 种语气）",
+    "featureSync": "云同步（端到端加密）",
+    "featureCloudStorage": "附件云端存储",
+    "featureShare": "文档分享（只读链接）",
+    "featureLinkPreview": "链接预览",
+    "featurePriority": "优先支持",
+    "yearly": "按年订阅",
+    "ctaStart": "开始使用"
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "siteName": "Verse",
+  "site": {
+    "title": "Verse - Capture anytime. Create anything.",
+    "description": "Combining Notion-style structured documents, Obsidian-style local privacy, and AI writing intelligence into one productivity tool."
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "download": "Download",
+    "faq": "Help & Guide",
+    "openWeb": "Open Web App",
+    "language": "中文"
+  },
+  "hero": {
+    "title": "Capture anytime. Create anything.",
+    "subtitle": "Notion's workspace · Obsidian's privacy · AI's intelligence",
+    "desc": "More than just another notes app.\nCombining Notion's structured document management, Obsidian's local-first privacy, and AI writing assistance —\none tool for capturing, organizing, and writing.",
+    "ctaDownload": "Download Free",
+    "ctaLearnMore": "Learn More"
+  },
+  "features": {
+    "title": "Notion + Obsidian + AI",
+    "desc": "No feature bloat — combining the best of three worlds into one compound productivity tool",
+    "items": [
+      {
+        "title": "Structured Document Workspace",
+        "desc": "Manage documents with folders and tree structure, like Notion. Keep your data on your machine, like Obsidian. Rich text WYSIWYG editing with instant Markdown split-pane switching.",
+        "detail": "Notion's structure + Obsidian's privacy — one tool."
+      },
+      {
+        "title": "AI Writing Partner",
+        "desc": "Select multiple notes as context, choose a template, and AI drafts based on YOUR content — not generic knowledge, but your own thinking refined. Supports 4 rewriting tones.",
+        "detail": "Your material. Your document. AI just helps."
+      },
+      {
+        "title": "Link Previews",
+        "desc": "Paste a URL into your document and it auto-expands into a rich media card — web summaries, video embeds, cover images. Preview without leaving the editor.",
+        "detail": "Paste and preview. Stay in flow."
+      },
+      {
+        "title": "Calendar Notes",
+        "desc": "Built-in calendar component for quick daily notes. Perfect for journals, work logs, and meeting memos, seamlessly connected to your document system.",
+        "detail": "A timeline approach to note-taking — natural and intuitive."
+      },
+      {
+        "title": "Attachment Management",
+        "desc": "Upload and embed images, videos, PDFs, and text files. Preview them directly inside the app — no external programs needed. Locally stored, secure and reliable.",
+        "detail": "Drag and drop. Preview in place."
+      },
+      {
+        "title": "Sync & Share (PRO)",
+        "desc": "End-to-end encrypted bidirectional sync between desktop and web. Generate public read-only share links. Secure, seamless access anywhere.",
+        "detail": "Secure sync. Elegant sharing."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Three Steps to a Finished Document",
+    "desc": "From scattered notes to polished output in three simple steps",
+    "steps": [
+      {
+        "title": "Capture Ideas Freely",
+        "desc": "Thoughts, chat excerpts, work progress, daily items — record them in whatever way feels natural. Don't worry about format or structure."
+      },
+      {
+        "title": "Let AI Refine",
+        "desc": "Select multiple notes as context, choose a document template. AI asks clarifying questions first, then generates a structured draft. Refine with different tones anytime."
+      },
+      {
+        "title": "Export & Use",
+        "desc": "Fine-tune in the editor, then copy to clipboard, export as Markdown or PDF. An email, a report, an article — ready to use."
+      }
+    ]
+  },
+  "useCases": {
+    "title": "Who It's For",
+    "desc": "Whether you're a professional, job seeker, student, or creator — Verse makes document work effortless",
+    "items": [
+      {
+        "title": "Professionals",
+        "desc": "Weekly reports, performance reviews, meeting notes, client emails — all your daily documents in one place."
+      },
+      {
+        "title": "Job Seekers",
+        "desc": "Resumes, cover letters, interview stories — AI helps you polish every experience."
+      },
+      {
+        "title": "Students",
+        "desc": "Book reports, presentations, course summaries — from research to final draft with ease."
+      },
+      {
+        "title": "Content Creators",
+        "desc": "Topic brainstorming, script writing, article publishing — capture inspiration and produce polished work."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "desc": "Start free, upgrade as you grow",
+    "free": {
+      "name": "Free",
+      "price": "Free",
+      "desc": "For personal daily use",
+      "features": [
+        "Local document editing (Rich Text + Markdown)",
+        "Folder management & favorites",
+        "Calendar notes",
+        "Attachments & image embeds",
+        "Export (Copy / Markdown / PDF)"
+      ]
+    },
+    "pro": {
+      "name": "PRO",
+      "price": "Yearly subscription",
+      "desc": "For cross-device users",
+      "features": [
+        "All Free features",
+        "Cloud sync (end-to-end encrypted)",
+        "Cloud storage for attachments & images",
+        "Document sharing (public read-only links)",
+        "Link previews (rich media embeds)",
+        "Priority support"
+      ]
+    },
+    "plus": {
+      "name": "PLUS",
+      "price": "Yearly subscription",
+      "desc": "For heavy AI users",
+      "features": [
+        "All PRO features",
+        "AI writing assistant (1M tokens/month)",
+        "AI rewriting (4 tones)",
+        "More document templates"
+      ]
+    },
+    "cta": "View full pricing",
+    "faq": "FAQ",
+    "faqQ1": "Are there limitations on the Free plan?",
+    "faqA1": "The Free plan includes full editor and local storage capabilities, enough for daily note-taking and writing. AI writing assistant and cloud sync are paid features.",
+    "faqQ2": "Can I cancel my subscription anytime?",
+    "faqA2": "Yes. PRO and PLUS subscriptions are billed yearly and can be cancelled anytime. You'll retain full access until the end of the billing period.",
+    "faqQ3": "How is my data protected?",
+    "faqA3": "Free plan data is entirely local. PRO cloud sync uses end-to-end encryption — servers cannot read your content.",
+    "faqQ4": "Which platforms are supported?",
+    "faqA4": "Currently supports Windows (x64), macOS (Intel & Apple Silicon) desktop apps, and a web browser version. macOS 15+ required."
+  },
+  "cta": {
+    "title": "Get Started with Verse",
+    "desc": "Download for free and experience local-first document working",
+    "button": "Download Free"
+  },
+  "download": {
+    "title": "Download Verse",
+    "desc": "Choose your platform and get started",
+    "platforms": {
+      "windows": "Windows",
+      "macos": "macOS",
+      "web": "Web App"
+    },
+    "windowsDesc": "Windows 10/11, x64",
+    "macosDesc": "macOS 15+, Intel & Apple Silicon",
+    "webDesc": "No installation needed, open in your browser",
+    "downloadButton": "Download",
+    "openWeb": "Open Web App",
+    "requirements": "System Requirements",
+    "version": "Latest Version",
+    "currentVersion": "v1.2.1",
+    "releaseNotes": "Release Notes"
+  },
+  "faq": {
+    "title": "Help & Guide",
+    "desc": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How is Verse different from ChatGPT?",
+        "a": "ChatGPT is a chat window, great for one-off content generation. But if you want to accumulate notes over time and turn scattered material into polished documents, the isolated chat format isn't ideal — conversations are independent and hard to cross-reference. Verse is a writing workspace: your notes live in folders on your machine, you can select multiple entries as context, and AI helps you draft from your own material. Simply put: ChatGPT is for conversation. Verse is for writing."
+      },
+      {
+        "q": "How is Verse different from Notion / Obsidian?",
+        "a": "Verse combines Notion's structured document management with Obsidian's local-first philosophy, and adds AI writing assistance on top. You can organize documents like Notion, protect privacy like Obsidian, and use AI to turn scattered notes into polished documents — the best of three worlds integrated into one tool."
+      },
+      {
+        "q": "Is my data safe?",
+        "a": "Free plan data is stored entirely in a local SQLite database and never uploaded to any server. AI features only access content you explicitly select as context. PRO cloud sync uses end-to-end encryption."
+      },
+      {
+        "q": "How does the AI feature work?",
+        "a": "In the AI panel on the right, select a document template (general, email, weekly report, etc.), reference your notes, and AI will ask clarifying questions before generating a draft. You can then rewrite with 4 different tones and apply to the editor with one click."
+      },
+      {
+        "q": "What's the difference between Free and paid plans?",
+        "a": "Free includes full editing and local storage — great for daily use. PRO adds cloud sync, cloud image storage, and document sharing. PLUS offers AI writing assistant and AI rewriting (1M tokens/month). See the pricing page for a detailed comparison."
+      },
+      {
+        "q": "How do I import / export documents?",
+        "a": "Import supports Markdown files and ZIP archives. Export supports Markdown, PDF, and clipboard copy. You can also export the entire workspace as a ZIP backup."
+      },
+      {
+        "q": "Which platforms are supported?",
+        "a": "Currently available on Windows (x64) and macOS 15+ (Intel & Apple Silicon) as a desktop app, plus a web browser version."
+      },
+      {
+        "q": "Is there a team or enterprise plan?",
+        "a": "We currently focus on individual users. If you have team collaboration needs, please reach out through our feedback channels — we'll plan based on demand."
+      }
+    ]
+  },
+  "footer": {
+    "description": "Combining Notion's structured documents, Obsidian's local privacy, and AI intelligence into one productivity tool.",
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "download": "Download",
+    "faq": "Help & Guide",
+    "contact": "Contact",
+    "social": "Community",
+    "wechat": "WeChat",
+    "wechatName": "Verse-素章",
+    "copyright": "© 2024-2026 Verse. All rights reserved."
+  },
+  "featuresPage": {
+    "title": "All Features",
+    "desc": "Every feature designed to help you finish documents faster"
+  },
+  "pricingPage": {
+    "title": "Pricing",
+    "desc": "Start free, upgrade as you grow",
+    "compareTitle": "Feature Comparison",
+    "featureLocalFirst": "Local-first storage",
+    "featureRichText": "Rich text editing",
+    "featureMarkdown": "Markdown editing",
+    "featureFolder": "Folder management & favorites",
+    "featureCalendar": "Calendar notes",
+    "featureAttachments": "Attachments & image embeds",
+    "featureExport": "Export (Markdown / PDF)",
+    "featureAI": "AI writing assistant",
+    "featureAILimit": "AI quota (1M tokens/month)",
+    "featureAIRewrite": "AI rewriting (4 tones)",
+    "featureSync": "Cloud sync (end-to-end encrypted)",
+    "featureCloudStorage": "Cloud storage for attachments",
+    "featureShare": "Document sharing (read-only links)",
+    "featureLinkPreview": "Link previews",
+    "featurePriority": "Priority support",
+    "yearly": "Yearly subscription",
+    "ctaStart": "Get Started"
+  }
+}

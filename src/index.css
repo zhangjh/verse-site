@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #fafaf9;
+    --color-bg-alt: #f5f5f4;
+    --color-text: #292524;
+    --color-text-muted: #78716c;
+    --color-border: #e7e5e4;
+    --color-card: #ffffff;
+  }
+
+  .dark {
+    --color-bg: #1c1917;
+    --color-bg-alt: #292524;
+    --color-text: #e7e5e4;
+    --color-text-muted: #a8a29e;
+    --color-border: #44403c;
+    --color-card: #292524;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text)] antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Noto Sans SC', sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+}
