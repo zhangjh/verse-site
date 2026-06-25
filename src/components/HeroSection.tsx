@@ -55,7 +55,7 @@ export function HeroSection() {
           <div className="relative mx-auto max-w-4xl">
             <div className="aspect-video rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-xl relative group">
               <video
-                src="/Verse.mp4"
+                src="https://r2.zhangjh.cn/verse/Verse.mp4"
                 autoPlay
                 loop
                 playsInline
