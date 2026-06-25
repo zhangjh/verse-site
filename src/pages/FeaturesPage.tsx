@@ -6,7 +6,6 @@ import {
   Calendar,
   Paperclip,
   Cloud,
-  Image,
   Sparkles,
 } from 'lucide-react'
 import { SeoHead } from '../components/SeoHead'
@@ -15,13 +14,13 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const iconMap = [FileText, Bot, Link2, Calendar, Paperclip, Cloud] as const
 
-const placeholderImages = [
-  { icon: Image, label: 'Document workspace UI' },
-  { icon: Bot, label: 'AI writing panel' },
-  { icon: Image, label: 'Link preview cards' },
-  { icon: Calendar, label: 'Calendar notes' },
-  { icon: Image, label: 'Attachment preview' },
-  { icon: Cloud, label: 'Sync & share' },
+const featureImages = [
+  '/document.png',
+  '/AI-helper.png',
+  '/preview_card.png',
+  '/calendar.png',
+  '/attachment.png',
+  '/share.png',
 ]
 
 export function FeaturesPage() {
@@ -55,7 +54,6 @@ export function FeaturesPage() {
         <div className="space-y-20 md:space-y-28">
           {items.map((item, i) => {
             const Icon = iconMap[i]
-            const img = placeholderImages[i]
             const isReversed = i % 2 === 1
             return (
               <div
@@ -80,11 +78,12 @@ export function FeaturesPage() {
                   </p>
                 </div>
                 <div className="flex-1 w-full">
-                  <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-stone-200 to-stone-300 dark:from-stone-800 dark:to-stone-700 flex items-center justify-center border border-[var(--color-border)] shadow-md">
-                    <div className="text-center">
-                      <img.icon size={36} className="mx-auto mb-2 text-[var(--color-text-muted)]/50" />
-                      <p className="text-xs text-[var(--color-text-muted)]">{img.label}</p>
-                    </div>
+                  <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+                    <img
+                      src={featureImages[i]}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>

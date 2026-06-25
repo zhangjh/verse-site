@@ -1,12 +1,14 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { ArrowDown, ChevronRight, Sparkles, Shield, Feather } from 'lucide-react'
+import { ArrowDown, ChevronRight, Sparkles, Feather, Volume2, VolumeX } from 'lucide-react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 export function HeroSection() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language.startsWith('zh') ? 'zh' : 'en'
   const { ref, visible } = useScrollReveal<HTMLDivElement>(0.1)
+  const [isMuted, setIsMuted] = useState(true)
 
   return (
     <section className="relative overflow-hidden">
@@ -51,15 +53,22 @@ export function HeroSection() {
 
         <div className={`mt-16 md:mt-20 ${visible ? 'reveal visible reveal-delay-3' : 'reveal reveal-delay-3'}`}>
           <div className="relative mx-auto max-w-4xl">
-            <div className="aspect-video rounded-2xl bg-gradient-to-br from-stone-200 to-stone-300 dark:from-stone-800 dark:to-stone-700 flex items-center justify-center border border-[var(--color-border)] shadow-xl">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-3 rounded-xl bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center">
-                  <Shield size={32} className="text-amber-500" />
-                </div>
-                <p className="text-sm text-[var(--color-text-muted)]">
-                  Product preview — screenshot / video placeholder
-                </p>
-              </div>
+            <div className="aspect-video rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-xl relative group">
+              <video
+                src="/Verse.mp4"
+                autoPlay
+                loop
+                playsInline
+                muted={isMuted}
+                className="w-full h-full object-cover"
+              />
+              <button
+                onClick={() => setIsMuted(!isMuted)}
+                className="absolute bottom-4 right-4 p-2 rounded-lg bg-black/50 hover:bg-black/70 text-white transition-all opacity-0 group-hover:opacity-100"
+                aria-label={isMuted ? 'Unmute' : 'Mute'}
+              >
+                {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+              </button>
             </div>
             <div className="absolute -bottom-3 -right-3 -left-3 h-6 bg-amber-500/10 dark:bg-amber-500/5 blur-2xl rounded-full" />
           </div>
