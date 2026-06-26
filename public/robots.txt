@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://verse-site.zhangjh.cn/sitemap.xml

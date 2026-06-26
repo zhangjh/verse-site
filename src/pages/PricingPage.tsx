@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Check, Info, Sparkles, X } from 'lucide-react'
 import { SeoHead } from '../components/SeoHead'
-import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const plans = ['free', 'pro', 'plus'] as const
 
@@ -45,7 +44,6 @@ const featureAvailability: FeatureAvailability = {
 
 export function PricingPage() {
   const { t } = useTranslation()
-  const { ref, visible } = useScrollReveal<HTMLDivElement>(0.05)
 
   return (
     <>
@@ -54,8 +52,8 @@ export function PricingPage() {
         description={t('pricingPage.desc')}
       />
 
-      <div className="section-container pt-20 pb-10 md:pt-28 md:pb-16" ref={ref}>
-        <div className={`text-center max-w-2xl mx-auto ${visible ? 'reveal visible' : 'reveal'}`}>
+      <div className="section-container pt-20 pb-10 md:pt-28 md:pb-16">
+        <div className="text-center max-w-2xl mx-auto reveal visible">
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-xs font-medium mb-4">
             <Sparkles size={14} />
             <span>Pricing</span>
@@ -70,7 +68,7 @@ export function PricingPage() {
       </div>
 
       <div className="section-container pb-16 md:pb-24">
-        <div className={`max-w-5xl mx-auto ${visible ? 'reveal visible' : 'reveal'}`}>
+        <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-5 mb-14">
             {plans.map((plan, i) => {
               const p = t(`pricing.${plan}`, { returnObjects: true }) as { name: string; price: string; desc: string; features: string[] }

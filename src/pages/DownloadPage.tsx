@@ -9,7 +9,6 @@ import {
   Globe,
 } from 'lucide-react'
 import { SeoHead } from '../components/SeoHead'
-import { useScrollReveal } from '../hooks/useScrollReveal'
 import { useGitHubRelease } from '../hooks/useGitHubRelease'
 
 interface ArchLink {
@@ -46,8 +45,6 @@ function findArchAssets(assets: { name: string; url: string }[], ext: string): A
 
 export function DownloadPage() {
   const { t, i18n } = useTranslation()
-  const lang = i18n.language.startsWith('zh') ? 'zh' : 'en'
-  const { ref, visible } = useScrollReveal<HTMLDivElement>(0.05)
   const { version, assets, loading, error } = useGitHubRelease()
   const [platforms, setPlatforms] = useState<Platform[]>(() => [
     { key: 'windows', icon: Monitor, link: '#' },
@@ -85,8 +82,8 @@ export function DownloadPage() {
         description={t('download.desc')}
       />
 
-      <div className="section-container pt-20 pb-10 md:pt-28 md:pb-16" ref={ref}>
-        <div className={`text-center max-w-2xl mx-auto ${visible ? 'reveal visible' : 'reveal'}`}>
+      <div className="section-container pt-20 pb-10 md:pt-28 md:pb-16">
+        <div className="text-center max-w-2xl mx-auto reveal visible">
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-xs font-medium mb-4">
             <Sparkles size={14} />
             <span>Download</span>
@@ -101,7 +98,7 @@ export function DownloadPage() {
       </div>
 
       <div className="section-container pb-16 md:pb-24">
-        <div className={`max-w-4xl mx-auto ${visible ? 'reveal visible' : 'reveal'}`}>
+        <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-5 mb-12">
             {platforms.map((platform, i) => {
               const Icon = platform.icon

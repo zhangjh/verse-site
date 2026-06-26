@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { Suspense } from 'react'
 import { LanguageRedirect } from './components/LanguageRedirect'
 import { Layout } from './components/Layout'
@@ -21,21 +21,19 @@ function Loading() {
   )
 }
 
-export default function App() {
+export function AppRoutes() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route path="/" element={<LanguageRedirect />} />
-          <Route path="/:lang" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="features" element={<FeaturesPage />} />
-            <Route path="pricing" element={<PricingPage />} />
-            <Route path="download" element={<DownloadPage />} />
-            <Route path="faq" element={<FaqPage />} />
-          </Route>
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <Suspense fallback={<Loading />}>
+      <Routes>
+        <Route path="/" element={<LanguageRedirect />} />
+        <Route path="/:lang" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="features" element={<FeaturesPage />} />
+          <Route path="pricing" element={<PricingPage />} />
+          <Route path="download" element={<DownloadPage />} />
+          <Route path="faq" element={<FaqPage />} />
+        </Route>
+      </Routes>
+    </Suspense>
   )
 }

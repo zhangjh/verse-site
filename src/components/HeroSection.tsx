@@ -1,8 +1,73 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { ArrowDown, ChevronRight, Sparkles, Feather, Volume2, VolumeX } from 'lucide-react'
+import { ArrowDown, ChevronRight, Sparkles, Feather, Volume2, VolumeX, Loader2 } from 'lucide-react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+
+function LazyVideo({ isMuted, onToggleMute }: { isMuted: boolean; onToggleMute: () => void }) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [shouldLoad, setShouldLoad] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1, rootMargin: '200px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div ref={containerRef} className="aspect-video rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-xl relative group bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-800 dark:to-stone-700">
+      {shouldLoad ? (
+        <>
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            playsInline
+            muted={isMuted}
+            className="w-full h-full object-cover"
+            preload="metadata"
+            onLoadedData={() => setIsLoading(false)}
+            onWaiting={() => setIsLoading(true)}
+            onCanPlay={() => setIsLoading(false)}
+          >
+            <source src="https://r2.zhangjh.cn/verse/Verse.mp4" type="video/mp4" />
+          </video>
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-stone-100/80 dark:bg-stone-800/80">
+              <div className="flex flex-col items-center gap-2">
+                <Loader2 size={24} className="animate-spin text-amber-500" />
+                <span className="text-xs text-[var(--color-text-muted)]">Loading video...</span>
+              </div>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Loader2 size={24} className="animate-spin text-amber-400" />
+        </div>
+      )}
+      <button
+        onClick={onToggleMute}
+        className="absolute bottom-4 right-4 p-2 rounded-lg bg-black/50 hover:bg-black/70 text-white transition-all opacity-0 group-hover:opacity-100 z-10"
+        aria-label={isMuted ? 'Unmute' : 'Mute'}
+      >
+        {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+      </button>
+    </div>
+  )
+}
 
 export function HeroSection() {
   const { t, i18n } = useTranslation()
@@ -53,23 +118,7 @@ export function HeroSection() {
 
         <div className={`mt-16 md:mt-20 ${visible ? 'reveal visible reveal-delay-3' : 'reveal reveal-delay-3'}`}>
           <div className="relative mx-auto max-w-4xl">
-            <div className="aspect-video rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-xl relative group">
-              <video
-                src="https://r2.zhangjh.cn/verse/Verse.mp4"
-                autoPlay
-                loop
-                playsInline
-                muted={isMuted}
-                className="w-full h-full object-cover"
-              />
-              <button
-                onClick={() => setIsMuted(!isMuted)}
-                className="absolute bottom-4 right-4 p-2 rounded-lg bg-black/50 hover:bg-black/70 text-white transition-all opacity-0 group-hover:opacity-100"
-                aria-label={isMuted ? 'Unmute' : 'Mute'}
-              >
-                {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-              </button>
-            </div>
+            <LazyVideo isMuted={isMuted} onToggleMute={() => setIsMuted(!isMuted)} />
             <div className="absolute -bottom-3 -right-3 -left-3 h-6 bg-amber-500/10 dark:bg-amber-500/5 blur-2xl rounded-full" />
           </div>
         </div>
