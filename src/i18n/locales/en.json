@@ -205,6 +205,10 @@
       {
         "q": "Is there a team or enterprise plan?",
         "a": "We currently focus on individual users. If you have team collaboration needs, please reach out through our feedback channels — we'll plan based on demand."
+      },
+      {
+        "q": "macOS says \"xxx is damaged and can't be opened\"?",
+        "a": "This is caused by macOS Gatekeeper. Open Terminal and run the following command, then reopen the app:\n\nsudo xattr -rd com.apple.quarantine /Applications/Verse.app\n\nIf the app is in a different location, replace the path accordingly. You may need to enter your password (no visible characters while typing)."
       }
     ]
   },
