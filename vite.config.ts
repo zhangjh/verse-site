@@ -26,9 +26,6 @@ export default defineConfig({
       enforce: 'post',
       generateBundle(_, bundle) {
         const prerenderKeys = Object.keys(bundle).filter(k => k.includes('prerender'))
-        for (const key of prerenderKeys) {
-          delete bundle[key]
-        }
         for (const [key, asset] of Object.entries(bundle)) {
           if (key.endsWith('.html') && asset.type === 'asset' && typeof asset.source === 'string') {
             let cleaned = asset.source as string
@@ -36,9 +33,9 @@ export default defineConfig({
               const fileName = pk.replace(/\\/g, '/').split('/').pop()!
               cleaned = cleaned
                 .replace(new RegExp(`\\s*<link[^>]*href="[^"]*${fileName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^"]*"[^>]*>`, 'gi'), '')
+              cleaned = cleaned
+                .replace(new RegExp(`\\s*<script[^>]*src="[^"]*${fileName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^"]*"[^>]*>[^<]*<\/script>`, 'gi'), '')
             }
-            cleaned = cleaned.replace(/\s*<script[^>]*\bprerender\b[^>]*>[^<]*<\/script>/gi, '')
-            cleaned = cleaned.replace(/\s*<script[^>]*\bprerender\b[^>]*\/>/gi, '')
             cleaned = cleaned.replace(/\s*crossorigin(=["'][^"']*["'])?/gi, '')
             asset.source = cleaned
           }
