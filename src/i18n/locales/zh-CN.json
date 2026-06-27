@@ -168,7 +168,11 @@
     "requirements": "系统要求",
     "version": "最新版本",
     "currentVersion": "v1.2.1",
-    "releaseNotes": "更新日志"
+    "releaseNotes": "更新日志",
+    "cloudDrives": "网盘下载（推荐使用）",
+    "cloudDriveHint": "网络更稳定，安装包较小，即使限速也能较快完成。",
+    "baiduPan": "百度网盘",
+    "quarkPan": "夸克网盘"
   },
   "faq": {
     "title": "帮助指南",
