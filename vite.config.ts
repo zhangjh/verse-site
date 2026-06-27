@@ -44,5 +44,12 @@ export default defineConfig({
         }
       },
     },
+    {
+      name: 'force-exit',
+      enforce: 'post',
+      closeBundle() {
+        process.exit(0)
+      },
+    },
   ],
 })
