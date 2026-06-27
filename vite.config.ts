@@ -39,6 +39,7 @@ export default defineConfig({
             }
             cleaned = cleaned.replace(/\s*<script[^>]*\bprerender\b[^>]*>[^<]*<\/script>/gi, '')
             cleaned = cleaned.replace(/\s*<script[^>]*\bprerender\b[^>]*\/>/gi, '')
+            cleaned = cleaned.replace(/\s*crossorigin(=["'][^"']*["'])?/gi, '')
             asset.source = cleaned
           }
         }
