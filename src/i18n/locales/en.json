@@ -112,7 +112,7 @@
     },
     "pro": {
       "name": "PRO",
-      "price": "Monthly subscription",
+      "price": "$4.9/mo",
       "desc": "For cross-device users",
       "features": [
         "All Free features",
@@ -125,7 +125,7 @@
     },
     "plus": {
       "name": "PLUS",
-      "price": "Monthly subscription",
+      "price": "$7.9/mo",
       "desc": "For heavy AI users",
       "features": [
         "All PRO features",

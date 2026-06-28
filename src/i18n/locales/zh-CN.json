@@ -112,7 +112,7 @@
     },
     "pro": {
       "name": "PRO",
-      "price": "按月订阅",
+      "price": "¥9.9/月",
       "desc": "适合跨设备工作的用户",
       "features": [
         "所有 Free 功能",
@@ -125,7 +125,7 @@
     },
     "plus": {
       "name": "PLUS",
-      "price": "按月订阅",
+      "price": "¥19.9/月",
       "desc": "适合高频使用 AI 的用户",
       "features": [
         "所有 PRO 功能",
