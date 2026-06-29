@@ -7,6 +7,7 @@ import {
   Sparkles,
   Apple,
   Globe,
+  Cloud,
 } from 'lucide-react'
 import { SeoHead } from '../components/SeoHead'
 import { useGitHubRelease } from '../hooks/useGitHubRelease'
@@ -159,6 +160,37 @@ export function DownloadPage() {
               )
             })}
           </div>
+
+          {i18n.language.startsWith('zh') && (
+          <div className="mb-12">
+            <h3 className="text-lg font-semibold text-center mb-5">{t('download.cloudDrives')}</h3>
+            <p className="text-center text-sm text-[var(--color-text-muted)] mb-5">
+              {t('download.cloudDriveHint')}
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://pan.baidu.com/s/1OzcK6JFmc-_aMeS-L7LyoQ?pwd=7qfp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-card)] border border-[var(--color-border)] text-sm font-medium hover:border-amber-300 dark:hover:border-amber-700 hover:-translate-y-0.5 transition-all"
+              >
+                <Cloud size={18} className="text-amber-500" />
+                {t('download.baiduPan')}
+                <ExternalLink size={14} className="text-[var(--color-text-muted)]" />
+              </a>
+              <a
+                href="https://pan.quark.cn/s/2ce34a44bdce"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-card)] border border-[var(--color-border)] text-sm font-medium hover:border-amber-300 dark:hover:border-amber-700 hover:-translate-y-0.5 transition-all"
+              >
+                <Cloud size={18} className="text-amber-500" />
+                {t('download.quarkPan')}
+                <ExternalLink size={14} className="text-[var(--color-text-muted)]" />
+              </a>
+            </div>
+          </div>
+          )}
 
           <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 md:p-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-[var(--color-border)]">

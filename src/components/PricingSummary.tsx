@@ -25,7 +25,7 @@ export function PricingSummary() {
         <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {plans.map((plan, i) => {
             const p = t(`pricing.${plan}`, { returnObjects: true }) as { name: string; price: string; desc: string; features: string[] }
-            const isPro = plan === 'pro'
+            const isPro = plan === 'plus'
             return (
               <div
                 key={plan}

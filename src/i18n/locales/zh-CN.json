@@ -112,7 +112,7 @@
     },
     "pro": {
       "name": "PRO",
-      "price": "按年订阅",
+      "price": "¥9.9/月",
       "desc": "适合跨设备工作的用户",
       "features": [
         "所有 Free 功能",
@@ -125,7 +125,7 @@
     },
     "plus": {
       "name": "PLUS",
-      "price": "按年订阅",
+      "price": "¥19.9/月",
       "desc": "适合高频使用 AI 的用户",
       "features": [
         "所有 PRO 功能",
@@ -139,7 +139,7 @@
     "faqQ1": "免费版有功能限制吗？",
     "faqA1": "免费版包含完整的编辑器和本地存储功能，日常记录和写作完全够用。AI 写作助手、云同步为付费功能。",
     "faqQ2": "可以随时取消订阅吗？",
-    "faqA2": "是的，PRO 和 PLUS 订阅按年付费，可随时取消。取消后到期前仍可享受全部功能。",
+    "faqA2": "是的，PRO 和 PLUS 订阅按月付费，可随时取消。取消后到期前仍可享受全部功能。",
     "faqQ3": "数据安全如何保障？",
     "faqA3": "免费版数据完全存储在本地。PRO 版的云同步使用端到端加密，服务器无法读取你的内容。",
     "faqQ4": "支持哪些平台？",
@@ -168,7 +168,11 @@
     "requirements": "系统要求",
     "version": "最新版本",
     "currentVersion": "v1.2.1",
-    "releaseNotes": "更新日志"
+    "releaseNotes": "更新日志",
+    "cloudDrives": "网盘下载（推荐使用）",
+    "cloudDriveHint": "网络更稳定，安装包较小，即使限速也能较快完成。",
+    "baiduPan": "百度网盘",
+    "quarkPan": "夸克网盘"
   },
   "faq": {
     "title": "帮助指南",
@@ -205,6 +209,10 @@
       {
         "q": "有团队版或企业版吗？",
         "a": "目前以个人用户为主。如果有团队协作需求，欢迎通过反馈渠道联系我们，我们会根据需求规划后续版本。"
+      },
+      {
+        "q": "macOS 提示「xxx 已损坏，无法打开」怎么办？",
+        "a": "这是 macOS Gatekeeper 的安全机制导致的。请打开「终端」应用，执行以下命令后重新打开应用：\n\nsudo xattr -rd com.apple.quarantine /Applications/Verse.app\n\n如果应用在其他位置，请将路径替换为实际路径。首次运行需要输入密码（输入时不会显示字符），回车即可。"
       }
     ]
   },
@@ -219,7 +227,7 @@
     "social": "社区",
     "wechat": "公众号",
     "wechatName": "Verse-素章",
-    "copyright": "© 2024-2026 素章。保留所有权利。"
+    "copyright": "© 2026-Present 素章。保留所有权利。"
   },
   "featuresPage": {
     "title": "所有特性",
@@ -244,8 +252,8 @@
     "featureShare": "文档分享（只读链接）",
     "featureLinkPreview": "链接预览",
     "featurePriority": "优先支持",
-    "yearly": "按年订阅",
+    "yearly": "按月订阅",
     "ctaStart": "开始使用",
-    "paymentNote": "网站仅展示功能对比，付费请前往 Web 版或本地客户端"
+    "paymentNote": "网站仅展示功能对比。请打开桌面端或 Web 版，进入设置页面选择云同步或 AI 助手等付费功能，跳出付费弹框后即可订阅。"
   }
 }

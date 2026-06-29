@@ -112,7 +112,7 @@
     },
     "pro": {
       "name": "PRO",
-      "price": "Yearly subscription",
+      "price": "$4.9/mo",
       "desc": "For cross-device users",
       "features": [
         "All Free features",
@@ -125,7 +125,7 @@
     },
     "plus": {
       "name": "PLUS",
-      "price": "Yearly subscription",
+      "price": "$7.9/mo",
       "desc": "For heavy AI users",
       "features": [
         "All PRO features",
@@ -139,7 +139,7 @@
     "faqQ1": "Are there limitations on the Free plan?",
     "faqA1": "The Free plan includes full editor and local storage capabilities, enough for daily note-taking and writing. AI writing assistant and cloud sync are paid features.",
     "faqQ2": "Can I cancel my subscription anytime?",
-    "faqA2": "Yes. PRO and PLUS subscriptions are billed yearly and can be cancelled anytime. You'll retain full access until the end of the billing period.",
+    "faqA2": "Yes. PRO and PLUS subscriptions are billed monthly and can be cancelled anytime. You'll retain full access until the end of the billing period.",
     "faqQ3": "How is my data protected?",
     "faqA3": "Free plan data is entirely local. PRO cloud sync uses end-to-end encryption — servers cannot read your content.",
     "faqQ4": "Which platforms are supported?",
@@ -205,6 +205,10 @@
       {
         "q": "Is there a team or enterprise plan?",
         "a": "We currently focus on individual users. If you have team collaboration needs, please reach out through our feedback channels — we'll plan based on demand."
+      },
+      {
+        "q": "macOS says \"xxx is damaged and can't be opened\"?",
+        "a": "This is caused by macOS Gatekeeper. Open Terminal and run the following command, then reopen the app:\n\nsudo xattr -rd com.apple.quarantine /Applications/Verse.app\n\nIf the app is in a different location, replace the path accordingly. You may need to enter your password (no visible characters while typing)."
       }
     ]
   },
@@ -219,7 +223,7 @@
     "social": "Community",
     "wechat": "WeChat",
     "wechatName": "Verse-素章",
-    "copyright": "© 2024-2026 Verse. All rights reserved."
+    "copyright": "© 2026-Present Verse. All rights reserved."
   },
   "featuresPage": {
     "title": "All Features",
@@ -244,8 +248,8 @@
     "featureShare": "Document sharing (read-only links)",
     "featureLinkPreview": "Link previews",
     "featurePriority": "Priority support",
-    "yearly": "Yearly subscription",
+    "yearly": "Monthly subscription",
     "ctaStart": "Get Started",
-    "paymentNote": "This page shows feature comparisons only. Purchase via the Web app or desktop client."
+    "paymentNote": "This page shows feature comparisons only. Open the desktop or Web app, go to Settings and select a paid feature (Cloud Sync or AI Assistant) to start your subscription."
   }
 }
